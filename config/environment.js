@@ -47,5 +47,9 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' http://127.0.0.1:8080"
+  };
+
   return ENV;
 };
