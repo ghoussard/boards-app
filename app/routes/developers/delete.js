@@ -1,4 +1,4 @@
-import DeleteRoute from '../../utils/delete-route';
+import DeleteRoute from '../delete-route';
 
 export default DeleteRoute.extend({
   model(params){

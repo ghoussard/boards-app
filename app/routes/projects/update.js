@@ -2,7 +2,6 @@ import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 import Ember from 'ember';
 import EmberObject from '@ember/object';
-import projectBase from '../../utils/project-base';
 
 export default Route.extend({
   templateName: 'projects/frm',
