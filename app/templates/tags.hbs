@@ -1,0 +1,13 @@
+<h2 class="ui header">Tags</h2>
+
+
+<div class="ui divider"></div>
+
+{{outlet}}
+
+{{#ui-table
+    elements=model.tags
+    fields=model.fields
+    operations=model.operations
+    emptyMessage='No tag to display'
+}}{{/ui-table}}
