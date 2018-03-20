@@ -1,0 +1,28 @@
+<div>
+  {{#ui-form
+    newValue=model.newTag
+    validation='save'
+    cancel='cancel'
+    bigIcon='tag'
+    isNew=model.isNew
+    header='Tag'
+  }}
+
+    <div class="two fields">
+      <div class="field">
+        <label for="title">Name</label>
+        {{input id='title' value=model.newTag.title placeholder='Enter a tag title'}}
+      </div>
+
+
+
+      <div class="field">
+        <label for="color">Color</label>
+        {{multi-select selected=model.newTag.color name="color" placeholder="Choose a color" elements=model.colors selectedElements=model.newProject.color}}
+      </div>
+    </div>
+
+  {{/ui-form}}
+</div>
+
+{{outlet}}
