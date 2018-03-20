@@ -22,7 +22,9 @@ Router.map(function() {
   this.route('story', function() {
     this.route('new', {path: 'new/:project_id'});
   });
-  this.route('tags');
+  this.route('tags', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

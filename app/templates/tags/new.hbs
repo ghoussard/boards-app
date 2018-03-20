@@ -1,0 +1,27 @@
+<div>
+  {{#ui-form
+    newValue=model
+    validation='save'
+    cancel='cancel'
+    bigIcon='tag'
+    smallIcon='plus'
+    header='Tag'
+    description='Adding a tag'
+  }}
+
+    <div class="two fields">
+      <div class="field">
+        <label for="title">Name</label>
+        {{input id='title' value=model.title placeholder='Enter a tag title'}}
+      </div>
+
+      <div class="field">
+        <label for="color">Color</label>
+        {{input id='color' value=model.color placeholder='Enter a color for your tag'}}
+      </div>
+    </div>
+
+  {{/ui-form}}
+</div>
+
+{{outlet}}

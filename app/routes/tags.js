@@ -5,7 +5,7 @@ export default Route.extend({
   model() {
     return RSVP.hash({
       tags: this.get('store').findAll('tag'),
-      fields: ['name', 'color'],
+      fields: ['title', 'color'],
       operations: []
     });
   }
