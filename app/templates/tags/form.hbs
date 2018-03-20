@@ -1,6 +1,7 @@
 <div>
   {{#ui-form
     newValue=model.newTag
+    oldValue=model.oldTag
     validation='save'
     cancel='cancel'
     bigIcon='tag'
@@ -18,7 +19,7 @@
 
       <div class="field">
         <label for="color">Color</label>
-        {{multi-select selected=model.newTag.color name="color" placeholder="Choose a color" elements=model.colors selectedElements=model.newProject.color}}
+        {{multi-select selected=model.newTag.color name="color" placeholder="Choose a color" elements=model.colors}}
       </div>
     </div>
 

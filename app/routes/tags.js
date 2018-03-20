@@ -6,7 +6,7 @@ export default Route.extend({
     return RSVP.hash({
       tags: this.get('store').findAll('tag'),
       fields: ['title', 'color'],
-      operations: [{icon:'red remove',link:'tags.delete'}]
+      operations: [{icon:'red remove',link:'tags.delete'}, {icon:'edit',link:'tags.update'}]
     });
   }
 });
