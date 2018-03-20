@@ -24,6 +24,7 @@ Router.map(function() {
   });
   this.route('tags', function() {
     this.route('new');
+    this.route('delete', { path: 'delete/:tag_id'});
   });
 });
 
