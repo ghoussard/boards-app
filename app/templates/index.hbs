@@ -1,3 +1,28 @@
-<div class="ui segment">Index</div>
+<div class="ui divided items">
+  {{#each model.models as |modelClass|}}
+    <div class="item">
+      <div class="content">
+        <div class="meta">
+          <span>{{ plural modelClass.objects.length "no item" "1 item" " items" }}</span>
+        </div>
+        <a class="header">{{modelClass.name}}</a>
+        <div class="description">
+          <div class="ui buttons">
+            {{#if modelClass.objects.length}}
+              <div class="ui basic black button">
+                <i class="eye icon"></i>
+                See all
+              </div>
+            {{/if}}
+            <div class="ui basic black button">
+              <i class="plus icon"></i>
+              Add new...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
 
 {{outlet}}
