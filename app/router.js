@@ -29,6 +29,7 @@ Router.map(function() {
   });
   this.route('steps', function() {
     this.route('new');
+    this.route('update', { path: 'update/:step_id'});
   });
 });
 
