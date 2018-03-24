@@ -32,7 +32,9 @@ Router.map(function() {
     this.route('update', { path: 'update/:step_id'});
     this.route('delete', { path: 'delete/:step_id'});
   });
-  this.route('tasks');
+  this.route('tasks', function() {
+    this.route('new');
+  });
 });
 
 export default Router;

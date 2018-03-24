@@ -1,0 +1,27 @@
+<div>
+  {{#ui-form
+    newValue=model.newTask
+    oldValue=model.oldTask
+    validation='save'
+    cancel='cancel'
+    bigIcon='pencil alternate'
+    isNew=model.isNew
+    header='Task'
+  }}
+
+    <div class="two fields">
+      <div class="field">
+        <label for="content">Content</label>
+        {{input id='content' value=model.newTask.content placeholder='Enter a task content'}}
+      </div>
+
+      <div class="field">
+        <label for="story">Story</label>
+        {{multi-select selected=model.idStory name="story" placeholder="Choose a story" elements=model.stories selectedElements=model.newTask.story}}
+      </div>
+    </div>
+
+  {{/ui-form}}
+</div>
+
+{{outlet}}
