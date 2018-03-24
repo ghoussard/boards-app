@@ -1,0 +1,20 @@
+<div>
+  {{#ui-form
+    newValue=model.newStep
+    oldValue=model.oldStep
+    validation='save'
+    cancel='cancel'
+    bigIcon='list'
+    isNew=model.isNew
+    header='Step'
+  }}
+
+    <div class="field">
+      <label for="title">Title</label>
+      {{input id='title' value=model.newStep.title placeholder='Enter a step title'}}
+    </div>
+
+  {{/ui-form}}
+</div>
+
+{{outlet}}

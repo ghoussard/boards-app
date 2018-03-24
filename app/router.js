@@ -27,7 +27,9 @@ Router.map(function() {
     this.route('delete', { path: 'delete/:tag_id'});
     this.route('update', { path: 'update/:tag_id'});
   });
-  this.route('steps');
+  this.route('steps', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
