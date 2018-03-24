@@ -1,0 +1,12 @@
+<h2 class="ui header">Tasks</h2>
+
+<div class="ui divider"></div>
+
+{{outlet}}
+
+{{#ui-table
+  elements=model.tasks
+  fields=model.fields
+  operations=model.operations
+  emptyMessage='No task to display'
+}}{{/ui-table}}
