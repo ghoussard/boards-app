@@ -8,6 +8,7 @@ export default DS.Model.extend({
   dueDate:DS.attr('date'),
   owner:DS.belongsTo('developer'),
   stories:DS.hasMany('story'),
+  step:DS.belongsTo('step'),
   sDate: computed('startDate',function(){
     if(this.get('startDate'))
       return this.get('startDate').toLocaleDateString();
