@@ -34,6 +34,7 @@ Router.map(function() {
   });
   this.route('tasks', function() {
     this.route('new');
+    this.route('update', { path: 'update/:task_id' });
   });
 });
 
