@@ -6,7 +6,7 @@ export default Route.extend({
     return RSVP.hash({
       tasks: this.get('store').findAll('task'),
       fields: ['content', {name:'story.description',caption:'Story'}],
-      operations: [{icon: 'edit', link: 'tasks.update'}]
+      operations: [{icon: 'red remove', link: 'tasks.delete'},{icon: 'edit', link: 'tasks.update'}]
     })
   }
 });
