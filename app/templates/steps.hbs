@@ -1,0 +1,12 @@
+<h2 class="ui header">Steps</h2>
+
+<div class="ui divider"></div>
+
+{{outlet}}
+
+{{#ui-table
+  elements=model.steps
+  fields=model.fields
+  operations=model.operations
+  emptyMessage='No step to display'
+}}{{/ui-table}}
