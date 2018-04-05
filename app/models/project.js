@@ -8,7 +8,7 @@ export default DS.Model.extend({
   dueDate:DS.attr('date'),
   owner:DS.belongsTo('developer'),
   stories:DS.hasMany('story'),
-  step:DS.belongsTo('step'),
+  boardVisible: false,
   sDate: computed('startDate',function(){
     if(this.get('startDate'))
       return this.get('startDate').toLocaleDateString();
@@ -16,5 +16,10 @@ export default DS.Model.extend({
   dDate: computed('dueDate',function(){
     if(this.get('dueDate'))
       return this.get('dueDate').toLocaleDateString();
+  }),
+  backlog: computed('boardVisible', 'stories.@each.step', function () {
+    return this.get('stories').filter(function (story) {
+      return story.step === undefined;
+    })
   })
 });
